@@ -169,3 +169,12 @@ If this resource saved you engineering hours, helped you design a zero-ETL data 
 <div align="center">
   <b>Empowering data engineers and ML practitioners to build AI where data lives. 💡</b>
 </div>
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-In-Database-Machine-Learning&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-In-Database-Machine-Learning_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-In-Database-Machine-Learning_growth.svg">
+  </picture>
+</a>
