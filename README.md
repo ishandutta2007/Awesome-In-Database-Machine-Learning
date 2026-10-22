@@ -7,7 +7,7 @@
 <br/><br/>
 
 <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-<a href="https://github.com/ishandutta2007/Awesome-In-Database-Machine-Learning/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-In-Database-Machine-Learning?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/ishandutta2007/Awesome-In-Database-Machine-Learning/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-In-Database-Machine-Learning?style=social" alt="GitHub_Stars" /></a>
 <a href="https://github.com/ishandutta2007/Awesome-In-Database-Machine-Learning/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-In-Database-Machine-Learning?style=social" alt="GitHub Forks" /></a>
 <a href="https://github.com/ishandutta2007/Awesome-In-Database-Machine-Learning/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License" /></a>
 <a href="https://github.com/ishandutta2007/Awesome-In-Database-Machine-Learning/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
@@ -131,7 +131,7 @@ Contributions are warmly welcomed! 🌟 To suggest or add entries:
 
 1. **Fork** this repository.
 2. Create a feature branch (`git checkout -b feature/add-in-db-tool`).
-3. Add the project to either SaaS or Open-Source table/list (keep star badges and formatting consistent).
+3. Add the project to either SaaS or Open-Source table/list (keep Stars_Badges and formatting consistent).
 4. Commit your changes (`git commit -m 'feat: add new in-database ML tool'`).
 5. Push to the branch (`git push origin feature/add-in-db-tool`).
 6. Open a **Pull Request** with a brief summary of the added platform.
