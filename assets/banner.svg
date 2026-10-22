@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16;border-radius:14px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#0a0e1a" />
+    </linearGradient>
+
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5" />
+      <circle cx="40" cy="40" r="1" fill="#334155" opacity="0.6" />
+    </pattern>
+  </defs>
+
+  <style>
+    /* Dynamic floating particles & waves in background */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.08); }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+      50% { transform: translateY(-25px) translateX(15px); opacity: 0.7; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+    }
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -120; }
+    }
+    @keyframes pulseRing {
+      0% { r: 6px; opacity: 0.8; }
+      100% { r: 18px; opacity: 0; }
+    }
+
+    .bg-pulse-1 { animation: pulseGlow 8s ease-in-out infinite; transform-origin: 200px 100px; }
+    .bg-pulse-2 { animation: pulseGlow 10s ease-in-out infinite 2s; transform-origin: 1000px 260px; }
+    
+    .particle-1 { animation: floatParticle 7s ease-in-out infinite; }
+    .particle-2 { animation: floatParticle 9s ease-in-out infinite 1.5s; }
+    .particle-3 { animation: floatParticle 6s ease-in-out infinite 3s; }
+    .particle-4 { animation: floatParticle 8s ease-in-out infinite 4.5s; }
+
+    .data-wire {
+      stroke-dasharray: 6, 6;
+      animation: dashFlow 4s linear infinite;
+    }
+    .wave-line {
+      stroke-dasharray: 8, 8;
+      animation: dashFlow 8s linear infinite;
+    }
+    .pulse-ring-anim {
+      animation: pulseRing 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+  </style>
+
+  <!-- Deep Canvas Background -->
+  <rect width="1200" height="360" fill="url(#bg-grad)" />
+  <rect width="1200" height="360" fill="url(#grid)" />
+
+  <!-- DYNAMIC BACKGROUND ELEMENTS (Kept strictly behind and around edges) -->
+  <g class="bg-pulse-1">
+    <circle cx="180" cy="90" r="160" fill="#38bdf8" opacity="0.12" filter="url(#glow)" />
+  </g>
+  <g class="bg-pulse-2">
+    <circle cx="1020" cy="270" r="180" fill="#a855f7" opacity="0.12" filter="url(#glow)" />
+  </g>
+
+  <!-- Animated ambient neural / circuit lines in background -->
+  <g opacity="0.35">
+    <path class="data-wire" d="M 50,180 Q 250,50 450,120 T 850,80 T 1150,180" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <path class="wave-line" d="M 50,260 Q 300,320 600,280 T 1150,240" fill="none" stroke="#818cf8" stroke-width="1.5" />
+  </g>
+
+  <!-- Dynamic ambient nodes and pulses -->
+  <g class="particle-1">
+    <circle cx="140" cy="70" r="4" fill="#38bdf8" filter="url(#soft-glow)" />
+    <circle class="pulse-ring-anim" cx="140" cy="70" r="6" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+  </g>
+  <g class="particle-2">
+    <circle cx="1080" cy="110" r="4.5" fill="#c084fc" filter="url(#soft-glow)" />
+    <circle class="pulse-ring-anim" cx="1080" cy="110" r="6" fill="none" stroke="#c084fc" stroke-width="1.5" />
+  </g>
+  <g class="particle-3">
+    <circle cx="100" cy="290" r="3.5" fill="#818cf8" filter="url(#soft-glow)" />
+  </g>
+  <g class="particle-4">
+    <circle cx="1120" cy="290" r="4" fill="#38bdf8" filter="url(#soft-glow)" />
+  </g>
+
+  <!-- Left decorative tech icon: Database Cylinder + AI Core -->
+  <g transform="translate(70, 110)" opacity="0.85">
+    <!-- Cylinder Base -->
+    <path d="M 10 25 C 10 15, 70 15, 70 25 L 70 85 C 70 95, 10 95, 10 85 Z" fill="none" stroke="#334155" stroke-width="2" />
+    <ellipse cx="40" cy="25" rx="30" ry="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <path d="M 10 45 C 10 55, 70 55, 70 45" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.6" />
+    <path d="M 10 65 C 10 75, 70 75, 70 65" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.6" />
+    <ellipse cx="40" cy="85" rx="30" ry="10" fill="#0f172a" stroke="#c084fc" stroke-width="2" />
+    <!-- Floating Spark/AI symbol -->
+    <circle cx="40" cy="55" r="5" fill="#38bdf8" filter="url(#soft-glow)" />
+  </g>
+
+  <!-- Right decorative tech icon: Neural Cluster / Tensor -->
+  <g transform="translate(1040, 110)" opacity="0.85">
+    <line x1="20" y1="30" x2="60" y2="20" stroke="#818cf8" stroke-width="1.5" />
+    <line x1="60" y1="20" x2="70" y2="70" stroke="#818cf8" stroke-width="1.5" />
+    <line x1="20" y1="30" x2="30" y2="80" stroke="#818cf8" stroke-width="1.5" />
+    <line x1="30" y1="80" x2="70" y2="70" stroke="#818cf8" stroke-width="1.5" />
+    <line x1="20" y1="30" x2="70" y2="70" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="3,3" />
+    
+    <circle cx="20" cy="30" r="6" fill="#38bdf8" filter="url(#soft-glow)" />
+    <circle cx="60" cy="20" r="5" fill="#818cf8" filter="url(#soft-glow)" />
+    <circle cx="70" cy="70" r="7" fill="#c084fc" filter="url(#soft-glow)" />
+    <circle cx="30" cy="80" r="5" fill="#a855f7" filter="url(#soft-glow)" />
+  </g>
+
+  <!-- FOREGROUND CONTENT: Header Pill, Title, Subtitle, Feature Badges (Always crisp & fully visible) -->
+
+  <!-- Top Category Pill -->
+  <g transform="translate(600, 52)">
+    <rect x="-160" y="-14" width="320" height="28" rx="14" fill="#1e293b" fill-opacity="0.85" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="-136" cy="0" r="4" fill="#38bdf8" />
+    <text x="-122" y="4" fill="#94a3b8" font-size="12" font-weight="600" letter-spacing="1.5">CURATED ECOSYSTEM &amp; GUIDE</text>
+  </g>
+
+  <!-- Main Hero Title -->
+  <g transform="translate(600, 125)">
+    <text text-anchor="middle" font-size="44" font-weight="800" letter-spacing="-0.5" fill="url(#primary-grad)" filter="url(#soft-glow)">
+      Awesome In-Database Machine Learning
+    </text>
+  </g>
+
+  <!-- Subtitle Line 1 -->
+  <g transform="translate(600, 172)">
+    <text text-anchor="middle" font-size="19" font-weight="500" fill="#e2e8f0" letter-spacing="0.2">
+      Zero-Data Movement • SQL-Native Training • High-Throughput In-Database Inference
+    </text>
+  </g>
+
+  <!-- Subtitle Line 2 / Value Prop -->
+  <g transform="translate(600, 204)">
+    <text text-anchor="middle" font-size="14.5" font-weight="400" fill="#94a3b8">
+      Top Cloud SaaS Warehouses, Open-Source Database Extensions &amp; AI Query Engines
+    </text>
+  </g>
+
+  <!-- Foreground Pill Badges (Technologies & Benefits) -->
+  <g transform="translate(600, 265)">
+    <!-- Pill 1: SQL CREATE MODEL -->
+    <g transform="translate(-330, 0)">
+      <rect x="-75" y="-15" width="150" height="30" rx="15" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
+      <text text-anchor="middle" y="5" fill="#38bdf8" font-size="12" font-weight="600">⚡ SQL CREATE MODEL</text>
+    </g>
+    <!-- Pill 2: Zero ETL Latency -->
+    <g transform="translate(-165, 0)">
+      <rect x="-70" y="-15" width="140" height="30" rx="15" fill="#0f172a" stroke="#818cf8" stroke-width="1.2" />
+      <text text-anchor="middle" y="5" fill="#a5b4fc" font-size="12" font-weight="600">🛡️ Zero-ETL Privacy</text>
+    </g>
+    <!-- Pill 3: In-Database Inference -->
+    <g transform="translate(0, 0)">
+      <rect x="-75" y="-15" width="150" height="30" rx="15" fill="#0f172a" stroke="#c084fc" stroke-width="1.2" />
+      <text text-anchor="middle" y="5" fill="#d8b4fe" font-size="12" font-weight="600">🚀 Embedded Inference</text>
+    </g>
+    <!-- Pill 4: Vector Search & LLMs -->
+    <g transform="translate(165, 0)">
+      <rect x="-70" y="-15" width="140" height="30" rx="15" fill="#0f172a" stroke="#ec4899" stroke-width="1.2" />
+      <text text-anchor="middle" y="5" fill="#f472b6" font-size="12" font-weight="600">🧠 LLM &amp; Vector RAG</text>
+    </g>
+    <!-- Pill 5: Cloud & Open-Source -->
+    <g transform="translate(330, 0)">
+      <rect x="-75" y="-15" width="150" height="30" rx="15" fill="#0f172a" stroke="#22c55e" stroke-width="1.2" />
+      <text text-anchor="middle" y="5" fill="#4ade80" font-size="12" font-weight="600">🌐 Cloud &amp; Open-Source</text>
+    </g>
+  </g>
+
+  <!-- Modern bottom accent border glow -->
+  <rect x="0" y="356" width="1200" height="4" fill="url(#primary-grad)" />
+</svg>

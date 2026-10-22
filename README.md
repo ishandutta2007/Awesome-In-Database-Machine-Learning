@@ -1,46 +1,67 @@
-# Awesome-In-Database-Machine-Learning
+# <div align="center">Awesome In-Database Machine Learning 🚀</div>
 
-## Top In-Database Machine Learning Ecosystem
+<div align="center">
 
+<img src="assets/banner.svg" alt="Awesome In-Database Machine Learning Banner" width="100%" />
 
+<br/><br/>
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+<a href="https://github.com/ishandutta2007/Awesome-In-Database-Machine-Learning/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-In-Database-Machine-Learning?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/ishandutta2007/Awesome-In-Database-Machine-Learning/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-In-Database-Machine-Learning?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/ishandutta2007/Awesome-In-Database-Machine-Learning/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License" /></a>
+<a href="https://github.com/ishandutta2007/Awesome-In-Database-Machine-Learning/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
-*Focused on SQL-Native Model Training, In-Database Inference & Self-Hosted ML Extensions*  
+<br/>
 
-**Last updated: October 2026**
+**Curated Hub for SQL-Native Machine Learning, In-Database Model Inference & Embedded AI Engines ⚡**
 
+*Train, score, fine-tune, and serve models directly inside relational, columnar, and analytical databases without ETL latency or data movement.*
 
+</div>
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **In-Database Machine Learning**. These tools enable data teams to train, evaluate, and deploy ML models directly inside the database using SQL—eliminating data movement, reducing latency, and keeping sensitive data within existing security boundaries.
+---
 
+## 📑 Table of Contents
 
+- [💡 Overview & Architecture](#-overview--architecture)
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS / Hosted Cloud Platforms](#️-saas--hosted-cloud-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🛠️ Patterns & Architectural Recipes](#️-patterns--architectural-recipes)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⭐ Star History](#-star-history)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [⚠️ Disclaimer](#️-disclaimer)
 
-**Examples** include BigQuery ML, Snowflake Cortex, Amazon Redshift ML, Azure Synapse ML, Oracle OML4SQL, Databricks, and MindsDB (the category leaders).
+---
 
+## 💡 Overview & Architecture
 
+**In-Database Machine Learning (In-DB ML)** executes mathematical, statistical, and neural algorithms directly within the storage engine or data warehouse tier. By utilizing database-native parallel processing (MPP) and calling ML algorithms through declarative SQL dialects (such as `CREATE MODEL` or `PREDICT`), data teams eliminate costly data extract-transform-load (ETL) pipelines, reduce operational network latency to near-zero, and preserve enterprise access control boundaries.
 
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, SQL-native ML, and transparent model training—ideal for organizations that cannot move data out of their databases, avoid per-query ML pricing, and require auditable model workflows. The open-source landscape is anchored by **Apache MADlib** (the mature in-database ML library for PostgreSQL/Greenplum), **MindsDB** (the AI query engine that federates across data sources), and **PostgresML** (the PostgreSQL extension for training and inference), with **ClickHouse** and **SingleStore** offering native SQL ML functions.
+```
+       Traditional ML Workflow                     In-Database ML Workflow
+   ┌──────────┐      Network      ┌─────────┐         ┌─────────────────────────┐
+   │ Database │ ───────────────>  │ External│         │    Database Engine      │
+   │ (Storage)│    Data Egress    │ Server  │         │ ┌─────────┐ ┌─────────┐ │
+   │          │ <───────────────  │ (Python)│         │ │ Storage │ │ Compute │ │
+   └──────────┘    Predictions    └─────────┘         │ │ Tables  │ │  & ML   │ │
+              ❌ High Latency & Risk                  │ └─────────┘ └─────────┘ │
+                                                      │  ⚡ Zero Data Movement  │
+                                                      └─────────────────────────┘
+```
 
+---
 
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## Sector Overview & Market Dynamics
+## 📊 Sector Overview & Market Dynamics
 
 The global in-database analytics and Data Science & Machine Learning (DSML) platform market is estimated at approximately **$170B – $220B** (projected to exceed $750B+ into the 2030s at an ~18–30% CAGR). The sector is **moderately concentrated to oligopolistic**—dominated at the infrastructure layer by hyperscalers (Alphabet, Microsoft, Amazon) and dedicated data giants (Databricks, Snowflake), while remaining dynamic and fragmented at the specialized engine, vector search, and open-source extension tiers.
 
-## SaaS/Hosted Platforms
+---
+
+## ☁️ SaaS / Hosted Cloud Platforms
 
 | Platform | Provider / Company | Company Size (Valuation / Market Cap) | Key In-Database ML Capabilities | Specific Starting Price | Free Tier / Trial Limits |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -55,76 +76,96 @@ The global in-database analytics and Data Science & Machine Learning (DSML) plat
 | **[ClickHouse Cloud](https://clickhouse.com/docs/en/sql-reference/functions/regular-functions/machine-learning-functions)** | ClickHouse Inc. | ~$2 Billion (Private Valuation) | Fast analytical engine with native SQL ML aggregate functions (`stochasticLinearRegression`, `naiveBayesClassifier`, `evalMLMethod`). | ~$0.22 to $0.75 per compute unit-hour (scale-to-zero when idle, dev configurations start at ~$66/month) + $25/TB-month storage | 30-day free trial with $300 usage credits (scale-to-zero compute supported) |
 | **[SingleStore Helios](https://docs.singlestore.com/)** | SingleStore | ~$1.3 Billion (Private Valuation) | Real-time distributed SQL database with built-in AI functions (`AI_CLASSIFY`, `AI_EXTRACT`, `EMBED_TEXT`) and vector index execution. | $0.99 per hour (Standard S-00 entry workspace, 2 vCPU / 16 GB RAM) + $0.023 per average GB/month storage | 1 GB compressed storage (~4 GB raw data) with standard SQL and vector search features (Free Forever Shared Tier) |
 
-## Open-Source GitHub Projects
+---
 
+## 🔓 Open-Source GitHub Projects
 
+Curated open-source projects providing self-hosted in-database model training, embedded vector retrieval, neural extensions, and AI query engines. Sorted by GitHub stargazer count (descending).
 
-- **[Apache MADlib](https://github.com/apache/madlib)**  
+- **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** [![Stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers)  
+  *High-performance open-source columnar database with built-in machine learning aggregate functions.* Enables fast linear and logistic regression (`stochasticLinearRegression`, `stochasticLogisticRegression`), Naive Bayes classification, and direct inference evaluation via `evalMLMethod` across billions of records directly in SQL.
 
-  **The mature in-database ML standard for PostgreSQL and Greenplum.** Apache Top-Level Project with data-parallel implementations of mathematical, statistical, graph, and ML methods for structured and unstructured data . **Key advantages**: uses MPP architecture's full compute and memory—no sampling required; familiar SQL interface; scales with additional nodes . **Supported platforms**: Greenplum 6.x/5.x and PostgreSQL 12.x/11.x (last three major versions tested per release) . Apache 2.0 licensed. Best for PostgreSQL/Greenplum shops that want proven, scalable SQL-native ML without data movement.
+- **[DuckDB](https://github.com/duckdb/duckdb)** [![Stars](https://img.shields.io/github/stars/duckdb/duckdb?style=social&color=white)](https://github.com/duckdb/duckdb/stargazers)  
+  *Embeddable analytical SQL database system designed for zero-copy in-process data analytics.* Frequently referred to as the "SQLite for Analytics", DuckDB allows direct zero-copy interchange with Python (Arrow, NumPy, Polars, PyTorch) and executes vector searches and statistical modeling inside the client process with zero network overhead.
 
+- **[MindsDB](https://github.com/mindsdb/mindsdb)** [![Stars](https://img.shields.io/github/stars/mindsdb/mindsdb?style=social&color=white)](https://github.com/mindsdb/mindsdb/stargazers)  
+  *Open-source AI query engine and MCP server platform.* Connects disparate databases, data warehouses, and vector stores to train, fine-tune, and deploy predictive and generative ML models through standard SQL statements (`CREATE MODEL ... PREDICT ...`).
 
+- **[pgvector](https://github.com/pgvector/pgvector)** [![Stars](https://img.shields.io/github/stars/pgvector/pgvector?style=social&color=white)](https://github.com/pgvector/pgvector/stargazers)  
+  *Open-source vector similarity search extension for PostgreSQL.* Enables in-database nearest-neighbor vector search (supporting HNSW and IVFFlat indexing, L2 distance, inner product, and cosine distance) directly alongside relational PostgreSQL queries.
 
-- **[MindsDB](https://github.com/mindsdb/mindsdb)**  
+- **[ParadeDB](https://github.com/paradedb/paradedb)** [![Stars](https://img.shields.io/github/stars/paradedb/paradedb?style=social&color=white)](https://github.com/paradedb/paradedb/stargazers)  
+  *Modern open-source search and analytics engine built on PostgreSQL.* Combines BM25 full-text search (`pg_search`) and high-performance vector retrieval (`pg_vector`) inside a single Postgres instance to power hybrid search and RAG workloads without needing a separate Elasticsearch or OpenSearch cluster.
 
-  **The AI query engine and MCP server.** Connects and unifies data across databases, vector stores, and applications; enables creating, serving, and fine-tuning AI models in real-time from federated data sources . **Positioning**: "The only MCP Server you'll ever need"—exposes ML capabilities to AI agents via Model Context Protocol. **Note**: MindsDB describes itself as an "AI data automation solution" rather than strictly in-database ML—it federates queries across sources rather than training inside a single database. GPL-3.0 licensed (core). Best for teams building AI applications that need to query and learn from data across multiple systems.
+- **[PostgresML](https://github.com/postgresml/postgresml)** [![Stars](https://img.shields.io/github/stars/postgresml/postgresml?style=social&color=white)](https://github.com/postgresml/postgresml/stargazers)  
+  *End-to-end machine learning platform implemented as a PostgreSQL extension.* Enables training traditional tabular models (XGBoost, LightGBM, Scikit-learn) and running GPU-accelerated Hugging Face transformers, embeddings generation, and LLMs directly within SQL queries inside Postgres.
 
+- **[SQLFlow](https://github.com/sql-machine-learning/sqlflow)** [![Stars](https://img.shields.io/github/stars/sql-machine-learning/sqlflow?style=social&color=white)](https://github.com/sql-machine-learning/sqlflow/stargazers)  
+  *Compiler and bridge connecting SQL engines to ML toolkits.* Extends traditional SQL syntax to support model training, hyperparameter tuning, and prediction using TensorFlow, PyTorch, and XGBoost on top of engines like MySQL, Hive, and MaxCompute.
 
+- **[Alink](https://github.com/alibaba/Alink)** [![Stars](https://img.shields.io/github/stars/alibaba/Alink?style=social&color=white)](https://github.com/alibaba/Alink/stargazers)  
+  *Comprehensive Machine Learning algorithm library based on Apache Flink, developed by Alibaba Computing Platform.* Offers a broad collection of distributed batch and stream ML algorithms for regression, clustering, classification, recommendation, and text analytics that execute directly across streaming databases and lakehouse pipelines.
 
-- **[PostgresML](https://github.com/postgresml/postgresml)**  
+- **[pgvectorscale](https://github.com/timescale/pgvectorscale)** [![Stars](https://img.shields.io/github/stars/timescale/pgvectorscale?style=social&color=white)](https://github.com/timescale/pgvectorscale/stargazers)  
+  *High-performance vector search extension for PostgreSQL built by Timescale.* Implements DiskANN-inspired indexing algorithms and Statistical Binary Quantization (SBQ) inside Postgres to deliver ultra-fast vector retrieval at massive scale with reduced memory footprints.
 
-  A PostgreSQL extension for training and inference directly in the database. Supports GPU acceleration and integrates with Hugging Face models. Best for PostgreSQL users wanting modern ML (including embeddings and LLM inference) without external services.
+- **[EvaDB](https://github.com/georgia-tech-db/evadb)** [![Stars](https://img.shields.io/github/stars/georgia-tech-db/evadb?style=social&color=white)](https://github.com/georgia-tech-db/evadb/stargazers)  
+  *Database system for building AI-powered apps over unstructured data (video, audio, text).* Developed at Georgia Tech, EvaDB incorporates deep learning models directly into query optimization plans and executes ML inference pipelines natively with a declarative SQL interface.
 
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **pgml** — The extension underlying PostgresML, available separately for PostgreSQL deployments. Best for teams that want the ML extension without the full PostgresML platform.
-
-- **PL/Python + scikit-learn** — Not a framework, but a pattern: use PostgreSQL's `plpython3u` extension to call scikit-learn inside SQL functions. Best for ad-hoc in-database ML when MADlib's algorithm coverage is insufficient.
-
-- **Frameworks for building custom systems**: Use **Apache MADlib** for proven SQL-native ML on PostgreSQL/Greenplum. Use **MindsDB** when you need to federate queries and models across multiple data sources. Use **ClickHouse** native functions for lightweight regression/classification on ClickHouse data. For PostgreSQL with GPU needs, use **PostgresML**. For data that must stay in Redshift/Snowflake/BigQuery, use the respective managed service.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- **"In-database" means different things across tools**: BigQuery ML, Redshift ML, and MADlib train models inside the database engine. Azure Synapse ML only scores pre-trained ONNX models—training must happen externally . MindsDB federates across sources rather than training in a single database .
-
-- **Managed services charge for compute beyond the database**: Redshift ML uses SageMaker under the hood ; BigQuery ML consumes BigQuery slots. Budget accordingly.
-
-- **Open-source in-database ML has platform constraints**: MADlib supports PostgreSQL and Greenplum, not MySQL, SQL Server, or Oracle . Verify compatibility before committing.
-
-
+- **[Apache MADlib](https://github.com/apache/madlib)** [![Stars](https://img.shields.io/github/stars/apache/madlib?style=social&color=white)](https://github.com/apache/madlib/stargazers)  
+  *The mature, enterprise-grade in-database machine learning standard for PostgreSQL and Greenplum.* An Apache Top-Level Project offering data-parallel implementations of statistical analysis, mathematical modeling, clustering, regression, decision trees, and deep neural network training that run on MPP architectures without moving data outside the cluster.
 
 ---
 
+## 🛠️ Patterns & Architectural Recipes
 
+- **PL/Python + Scikit-Learn / PyTorch**: Use PostgreSQL's trusted or untrusted language extensions (`plpython3u`) to create user-defined functions (UDFs) that serialize and execute Scikit-learn or ONNX models within SQL query plans.
+- **ONNX Runtime in DB**: Load pre-compiled `.onnx` model graphs as binary blobs into database tables and evaluate rows in micro-batches via native UDFs for low-latency scoring.
+- **Embedded Hybrid Search (BM25 + Dense Vectors)**: Co-locate vector embeddings (via `pgvector` or `pgvectorscale`) and lexical indexes (`pg_search`) in Postgres to evaluate relevance scoring without running multiple database systems.
 
-**Made for data engineers, analytics teams, and organizations that want ML without moving data.**  
+---
 
-Let's make in-database machine learning more open, SQL-native, and accessible.
+## 🤝 How to Contribute
+
+Contributions are warmly welcomed! 🌟 To suggest or add entries:
+
+1. **Fork** this repository.
+2. Create a feature branch (`git checkout -b feature/add-in-db-tool`).
+3. Add the project to either SaaS or Open-Source table/list (keep star badges and formatting consistent).
+4. Commit your changes (`git commit -m 'feat: add new in-database ML tool'`).
+5. Push to the branch (`git push origin feature/add-in-db-tool`).
+6. Open a **Pull Request** with a brief summary of the added platform.
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-In-Database-Machine-Learning&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-In-Database-Machine-Learning&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you so much for exploring and supporting the **Awesome In-Database Machine Learning** ecosystem! 🙏
+
+If this resource saved you engineering hours, helped you design a zero-ETL data architecture, or introduced you to new database AI tools, please consider supporting the project:
+
+- ⭐ **Star the repository** to boost visibility for the data engineering and ML community.
+- 🍴 **Fork and share** with colleagues, teammates, and communities on Reddit, LinkedIn, and X/Twitter.
+- ☕ **Sponsor / Buy a coffee**: Support ongoing curation, open-source benchmarking, and maintenance via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+[![Sponsor ishandutta2007](https://img.shields.io/badge/Sponsor-%E2%99%A5-pink?style=for-the-badge&logo=githubsponsors)](https://github.com/sponsors/ishandutta2007)
+
+---
+
+## ⚠️ Disclaimer
+
+- This is an independent, **community-curated** list for informational, educational, and architectural benchmarking purposes.
+- **"In-database" definitions vary across technologies**: Platforms like BigQuery ML and Apache MADlib execute model training and optimization directly inside the core database engine; solutions like Azure Synapse ML score pre-trained ONNX models, while MindsDB provides a federated query and MCP server layer.
+- **Pricing & Quotas**: SaaS cloud consumption prices and free tier quotas are verified as of October 2026. Verify current regional prices with respective cloud service providers before production provisioning.
+
+---
+
+<div align="center">
+  <b>Empowering data engineers and ML practitioners to build AI where data lives. 💡</b>
+</div>
